@@ -1,9 +1,17 @@
 import { useEffect, useState } from 'react'
 import { Counter, Toggle } from '../components'
 
+function sendWelcomeMessage() {
+  console.log('I want to play a game!')
+}
+
 function App() {
   const [count, setCount] = useState(0)
   const [accepted, setAccepted] = useState(false)
+
+  useEffect(() => {
+    sendWelcomeMessage()
+  }, [])
 
   useEffect(() => {
     console.log(`Count changed: ${count}`)
