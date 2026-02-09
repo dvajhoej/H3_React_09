@@ -1,16 +1,29 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Counter, Toggle } from '../components'
 
 function App() {
   const [count, setCount] = useState(0)
   const [accepted, setAccepted] = useState(false)
 
+  useEffect(() => {
+    console.log(`Count changed: ${count}`)
+  }, [count])
+
+  useEffect(() => {
+    if (!accepted) {
+      document.title = 'Accept the rules'
+      return
+    }
+
+    document.title = `Click count: ${count}`
+  }, [accepted, count])
+
   return (
     <>
       <Toggle accepted={accepted} onAccept={() => setAccepted((prev) => !prev)} />
       <Counter
         count={count}
-        onIncrement={() => setCount(count + 1)}
+        onIncrement={() => setCount((prev) => prev + 1)}
         onReset={() => setCount(0)}
         canClick={accepted}
       />
