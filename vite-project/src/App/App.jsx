@@ -1,41 +1,23 @@
-import { useEffect, useState } from 'react'
-import { Counter, Toggle } from '../components'
-
-function sendWelcomeMessage() {
-  console.log('I want to play a game!')
-}
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import MainLayout from '../layouts/MainLayout/MainLayout'
+import About from '../pages/About/About'
+import Clicker from '../pages/Clicker/Clicker'
+import Contact from '../pages/Contact/Contact'
+import Home from '../pages/Home/Home'
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [accepted, setAccepted] = useState(false)
-
-  useEffect(() => {
-    sendWelcomeMessage()
-  }, [])
-
-  useEffect(() => {
-    console.log(`Count changed: ${count}`)
-  }, [count])
-
-  useEffect(() => {
-    if (!accepted) {
-      document.title = 'Accept the rules'
-      return
-    }
-
-    document.title = `Click count: ${count}`
-  }, [accepted, count])
-
   return (
-    <>
-      <Toggle accepted={accepted} onAccept={() => setAccepted((prev) => !prev)} />
-      <Counter
-        count={count}
-        onIncrement={() => setCount((prev) => prev + 1)}
-        onReset={() => setCount(0)}
-        canClick={accepted}
-      />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="clicker" element={<Clicker />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

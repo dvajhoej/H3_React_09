@@ -1,0 +1,17 @@
+.site-header {
+  width: min(900px, 92vw);
+  margin: 1rem auto 0.75rem;
+  padding: 1rem;
+  border: 1px solid #d7d7d7;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.site-header-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.site-header-subtitle {
+  margin: 0.4rem 0 0;
+}

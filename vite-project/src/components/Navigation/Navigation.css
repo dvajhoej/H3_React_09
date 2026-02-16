@@ -1,0 +1,35 @@
+.site-nav {
+  width: min(900px, 92vw);
+  margin: 0 auto;
+  padding: 0.5rem;
+  border: 1px solid #d7d7d7;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.site-nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.site-nav-link {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 150ms ease;
+}
+
+.site-nav-link:hover {
+  background-color: #efefef;
+}
+
+.site-nav-link-active {
+  background-color: #dce7ff;
+  border-color: #9fb8f4;
+}

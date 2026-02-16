@@ -1,0 +1,25 @@
+.site-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+.site-main {
+  width: min(900px, 92vw);
+  margin: 1rem auto;
+}
+
+.site-main section {
+  background-color: #ffffff;
+  border: 1px solid #d7d7d7;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.site-main h2 {
+  margin: 0 0 0.5rem;
+}
+
+.site-main p {
+  margin: 0;
+}
