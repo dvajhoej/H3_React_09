@@ -2,11 +2,11 @@ import { NavLink } from 'react-router-dom'
 import './Navigation.css'
 
 const links = [
-  { to: '/', label: 'Home', end: true },
-  { to: '/products', label: 'Products' },
-  { to: '/clicker', label: 'Clicker' },
-  { to: '/about', label: 'About' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/', label: 'Hjem', end: true },
+  { to: '/products', label: 'Produkter' },
+  { to: '/clicker', label: 'Klikker' },
+  { to: '/about', label: 'Om os' },
+  { to: '/contact', label: 'Kontakt' },
 ]
 
 function Navigation() {

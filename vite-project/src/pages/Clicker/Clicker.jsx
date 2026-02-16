@@ -7,7 +7,7 @@ function Clicker() {
 
   return (
     <section>
-      <h2>Clicker</h2>
+      <h2>KLIK SPIL</h2>
       <Counter
         count={count}
         onIncrement={() => setCount((prev) => prev + 1)}

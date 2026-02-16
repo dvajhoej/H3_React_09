@@ -41,3 +41,39 @@
   border-color: #9fb8f4;
   box-shadow: 0 0 0 2px #dce7ff;
 }
+
+.single-product-page {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.single-product-back-button {
+  margin: 0 0 1rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  background-color: #f6f6f6;
+  font: inherit;
+  cursor: pointer;
+}
+
+.single-product-back-button:hover {
+  background-color: #ececec;
+}
+
+.single-product-card {
+  width: 100%;
+  border: 1px solid #d7d7d7;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.single-product-image {
+  display: block;
+  width: min(100%, 320px);
+  border: 1px solid #d7d7d7;
+  border-radius: 8px;
+  margin: 0 0 0.75rem;
+}

@@ -20,14 +20,14 @@ function Products() {
         })
 
         if (!response.ok) {
-          throw new Error('Request failed')
+          throw new Error('Fejl ved indlæsning af produkter.')
         }
 
         const data = await response.json()
         setProducts(data.products ?? [])
       } catch (requestError) {
         if (requestError.name !== 'AbortError') {
-          setError('Could not load products.')
+          setError('Kunne ikke indlæse produkter.')
         }
       } finally {
         setIsLoading(false)
@@ -45,23 +45,23 @@ function Products() {
 
   return (
     <section>
-      <h2>Products</h2>
+      <h2>PRODUKTER</h2>
       <input
         className="products-search"
         type="text"
-        placeholder="Search by title..."
+        placeholder="Søg efter vare..."
         value={searchTerm}
         onChange={(event) => setSearchTerm(event.target.value)}
       />
 
-      {isLoading && <p>Loading products...</p>}
+      {isLoading && <p>Indlæser produkter...</p>}
       {error && <p>{error}</p>}
 
       {!isLoading &&
         !error &&
         filteredProducts.map((product) => <ProductCard key={product.id} product={product} />)}
 
-      {!isLoading && !error && filteredProducts.length === 0 && <p>No products found.</p>}
+      {!isLoading && !error && filteredProducts.length === 0 && <p>Ingen produkter fundet.</p>}
     </section>
   )
 }
