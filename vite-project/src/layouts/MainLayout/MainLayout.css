@@ -23,3 +23,21 @@
 .site-main p {
   margin: 0;
 }
+
+.products-search {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 0 1rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #1f1f1f;
+  font: inherit;
+}
+
+.products-search:focus {
+  outline: none;
+  border-color: #9fb8f4;
+  box-shadow: 0 0 0 2px #dce7ff;
+}

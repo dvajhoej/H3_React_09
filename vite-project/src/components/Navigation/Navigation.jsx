@@ -3,10 +3,10 @@ import './Navigation.css'
 
 const links = [
   { to: '/', label: 'Home', end: true },
+  { to: '/products', label: 'Products' },
   { to: '/clicker', label: 'Clicker' },
   { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },
-  
 ]
 
 function Navigation() {
